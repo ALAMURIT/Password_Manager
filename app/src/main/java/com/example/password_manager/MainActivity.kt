@@ -99,7 +99,7 @@ fun ManagerHomeScreen(){
             value = _passwordStrength,
             onValueChange = { _passwordStrength = it }
         )
-        //generate button
+        //generate button (can skip button)
         //generated password
         Text(
             text = stringResource(R.string.generated_password,_generatedPassword)
