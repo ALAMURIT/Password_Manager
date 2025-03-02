@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Password_Manager</string>
+    <string name="user_name">User Name</string>
+    <string name="password_value">Password</string>
+    <string name="password_strength">Passowrd Strength</string>
+    <string name="password_manager">Password Manager</string>
+    <string name="generated_password">Generated password:/n%s</string>
 </resources>
