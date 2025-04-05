@@ -61,7 +61,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 fun ManagerHomeScreen(){
     var _userName by remember { mutableStateOf("") }
     var _passwordStrength by remember { mutableStateOf("4") }
-    val _passwordStrengthValue = _passwordStrength.toInt()
+    val _passwordStrengthValue = _passwordStrength.toIntOrNull() ?: 6
     val _generatedPassword = PasswordGenerator().GeneratePassword(_passwordStrengthValue)
     Column(
         modifier = Modifier
