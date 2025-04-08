@@ -59,6 +59,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 }
 @Composable
 fun ManagerHomeScreen(){
+    var _siteAddress by remember { mutableStateOf("") }
     var _userName by remember { mutableStateOf("") }
     var _passwordStrength by remember { mutableStateOf("4") }
     val _passwordStrengthValue = _passwordStrength.toIntOrNull() ?: 6
@@ -79,6 +80,16 @@ fun ManagerHomeScreen(){
                 .padding(bottom = 16.dp, top = 40.dp)
                 .align(alignment = Alignment.Start)
         )
+        //website_address
+        ReusableInputField(
+            label = R.string.address,
+            keyboardOptions = KeyboardOptions.Default.copy(
+                keyboardType = KeyboardType.Text,
+                imeAction = ImeAction.Next
+            ),
+            value = _siteAddress,
+            onValueChange = {_siteAddress=it}
+        )
         //username
         ReusableInputField(
             label = R.string.user_name,
@@ -86,7 +97,7 @@ fun ManagerHomeScreen(){
                 keyboardType = KeyboardType.Text,
                 imeAction = ImeAction.Next
             ),
-            value = _userName,
+            value = _userName
             onValueChange = { _userName = it }
         )
         //password_strength

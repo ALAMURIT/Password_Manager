@@ -22,7 +22,7 @@ class PasswordGenerator {
     fun GeneratePassword(_passwordStrength: Int): String{
         var _password=""
         for (i in 1.._passwordStrength){
-            var _index=Random.nextInt(3);
+            var _index=Random.nextInt(4);
             when(_index){
                 0->{
                     _password+=_capitalLetterGenerator()
